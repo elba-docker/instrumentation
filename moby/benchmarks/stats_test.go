@@ -12,7 +12,7 @@ import (
 // Used to test marshalling speed of CSV/JSON
 // End result: CSV is around 2.5x faster than JSON
 //   However, this excludes including Pre-CPU stats, since CSV
-//  i s designed for a long-table format, and duplicating row data
+//   is designed for a long-table format, and duplicating row data
 //   is unnecessary
 
 type ThrottlingData struct {
@@ -174,7 +174,6 @@ type Stats struct {
 
 	// Shared stats
 	CPUStats    CPUStats    `json:"cpu_stats,omitempty"`
-	PreCPUStats CPUStats    `json:"precpu_stats,omitempty"` // "Pre"="Previous"
 	MemoryStats MemoryStats `json:"memory_stats,omitempty"`
 }
 
